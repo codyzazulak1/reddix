@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.local/
+.data/
+pnpm-lock.yaml
+REDDIX_MASTER_PLAN.md
+AGENTS.md
+CLAUDE.md
+test-results/
+playwright-report/
+next-env.d.ts

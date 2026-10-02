@@ -1,0 +1,18 @@
+html:has(.social-image-preview),
+body:has(.social-image-preview) {
+  width: 1200px;
+  min-width: 1200px;
+  height: 630px;
+  min-height: 630px;
+  background: #f6f6f7;
+  color-scheme: light;
+}
+
+.social-image-preview,
+.social-image-preview > img {
+  display: block;
+  width: 1200px;
+  height: 630px;
+  margin: 0;
+  padding: 0;
+}

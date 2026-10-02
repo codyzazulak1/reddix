@@ -1,0 +1,9 @@
+.avatar.avatar-bot {
+  background: #f5f4f0;
+  color: #181b1e;
+  box-shadow: inset 0 0 0 1px rgb(24 27 30 / 8%);
+}
+
+.avatar.avatar-bot img {
+  object-fit: contain;
+}

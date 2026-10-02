@@ -1,0 +1,23 @@
+node_modules/
+.next/
+.local/
+.data/
+.env
+.env.local
+.env.*.local
+.DS_Store
+*.tsbuildinfo
+playwright-report/
+test-results/
+coverage/
+.vercel/
+.vercel
+.env*
+!.env.example
+
+# Private operational material
+docs/DEPLOYMENT.md
+REDDIX_MASTER_PLAN.md
+context/
+*.pem
+*.key

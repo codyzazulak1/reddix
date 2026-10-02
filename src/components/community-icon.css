@@ -1,0 +1,26 @@
+.community-identity.community-icon {
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 8%);
+}
+
+.community-identity .community-logo-image {
+  display: block;
+  width: 68%;
+  height: 68%;
+  object-fit: contain;
+}
+
+.community-identity .community-glyph {
+  width: 60%;
+  height: 60%;
+}
+
+.community-identity .community-logo-full {
+  width: 100%;
+  height: 100%;
+}
+
+.community-identity .community-monogram {
+  font-size: 0.8em;
+  line-height: 1;
+}

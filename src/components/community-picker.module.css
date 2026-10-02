@@ -1,0 +1,203 @@
+.picker {
+  position: relative;
+  min-width: 0;
+}
+
+.label {
+  margin: 0 0 8px;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 66px;
+  padding: 11px 14px;
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  background: var(--bg);
+  text-align: left;
+}
+
+.trigger:hover,
+.trigger[aria-expanded="true"] {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border-soft));
+  background: var(--surface-2);
+}
+
+.identity {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  gap: 1px;
+}
+
+.identity strong,
+.identity > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.identity strong {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.identity > span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.chevron {
+  color: var(--muted);
+  transition: transform 0.15s;
+}
+
+.trigger[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.popup {
+  position: absolute;
+  z-index: 4;
+  top: calc(100% + 8px);
+  inset-inline: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow:
+    0 14px 40px #00000024,
+    0 3px 10px #0000000a;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 10px;
+  padding: 0 12px;
+  border: 1px solid var(--border-soft);
+  border-radius: 9px;
+  background: var(--bg);
+  color: var(--muted);
+}
+
+.search:focus-within {
+  border-color: var(--compose-focus);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+/* Keep the search field inside its shared icon-and-input focus surface. */
+.picker .search input.searchInput,
+.picker .search input.searchInput:focus-visible {
+  flex: 1;
+  min-width: 0;
+  min-height: 42px;
+  padding: 9px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.clear {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+}
+
+.clear:hover {
+  color: var(--text);
+  background: var(--surface-3);
+}
+
+.list {
+  max-height: min(300px, 36dvh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  padding: 0 6px 6px;
+}
+
+.groupLabel {
+  padding: 9px 10px 6px;
+  color: var(--subtle);
+  font-size: 11px;
+  font-weight: 550;
+}
+
+.list [role="group"] + [role="group"] {
+  margin-top: 5px;
+  padding-top: 3px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  min-height: 58px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.option[data-active="true"] {
+  background: var(--surface-2);
+}
+
+.check {
+  color: var(--accent);
+}
+
+.joined {
+  color: var(--muted);
+  font-size: 10px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  background: var(--surface-2);
+}
+
+.empty {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 22px 16px 30px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.empty strong {
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.hint {
+  border-top: 1px solid var(--border-soft);
+  padding: 10px 16px;
+  color: var(--subtle);
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .picker .search input.searchInput,
+  .picker .search input.searchInput:focus-visible {
+    font-size: 16px;
+  }
+
+  .list {
+    max-height: min(260px, 32dvh);
+  }
+}

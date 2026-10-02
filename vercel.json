@@ -1,0 +1,14 @@
+{
+  "framework": "nextjs",
+  "regions": ["yul1"],
+  "crons": [
+    {
+      "path": "/api/jobs",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/jobs/x",
+      "schedule": "*/5 * * * *"
+    }
+  ]
+}

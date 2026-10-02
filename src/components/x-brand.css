@@ -1,0 +1,22 @@
+.x-mark {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: -0.12em;
+}
+
+.feed-heading-row {
+  margin: 3px 0 15px;
+}
+
+.feed-heading-row .feed-heading {
+  margin: 0;
+}
+
+.right-footer .x-independence {
+  flex-basis: 100%;
+  line-height: 1.6;
+}
+
+.button.x-account-link {
+  gap: 9px;
+}

@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: reddix
+      POSTGRES_PASSWORD: local-reddix-only
+      POSTGRES_DB: reddix
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - reddix_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U reddix"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+volumes:
+  reddix_pg:

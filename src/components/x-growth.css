@@ -1,0 +1,134 @@
+.x-growth-panel {
+  container-type: inline-size;
+}
+.x-growth-heading,
+.x-growth-status,
+.x-growth-row,
+.x-growth-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.x-growth-heading {
+  justify-content: space-between;
+}
+.x-growth-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  opacity: 0.55;
+  margin: 0 0 7px;
+}
+.x-growth-status {
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin: 18px 0 12px;
+}
+.x-growth-panel details {
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+}
+.x-growth-panel summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+.x-growth-panel summary span {
+  margin-left: 8px;
+  opacity: 0.5;
+  font-size: 11px;
+}
+.x-growth-row {
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.x-growth-row > div:first-child {
+  min-width: 0;
+  flex: 1;
+}
+.x-growth-row strong,
+.x-growth-row a {
+  font-size: 13px;
+}
+.x-growth-row p {
+  margin: 7px 0;
+  font-size: 12px;
+  opacity: 0.75;
+  overflow-wrap: anywhere;
+}
+.x-growth-actions {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 190px;
+}
+.x-growth-preview {
+  white-space: pre-wrap;
+}
+.x-growth-link {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: end;
+  gap: 10px;
+  margin: 18px 0;
+}
+.x-growth-link label {
+  display: grid;
+  gap: 7px;
+  font-size: 12px;
+}
+.x-growth-link input,
+.x-growth-link select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: inherit;
+  border-radius: 8px;
+  padding: 9px;
+}
+.community-x-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  margin-top: 7px;
+}
+.community-leaders {
+  padding: 0 24px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  align-items: center;
+  font-size: 12px;
+}
+.community-leaders > span {
+  opacity: 0.6;
+}
+.community-leaders button {
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  padding: 5px 9px;
+  font-size: 11px;
+}
+.discussion-leader {
+  font-size: 9px;
+  font-weight: 600;
+  padding: 3px 6px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  opacity: 0.7;
+}
+@container (max-width: 520px) {
+  .x-growth-link {
+    grid-template-columns: 1fr;
+  }
+  .x-growth-row {
+    flex-direction: column;
+  }
+  .x-growth-actions {
+    max-width: none;
+    justify-content: flex-start;
+  }
+}

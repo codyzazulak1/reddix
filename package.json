@@ -1,0 +1,64 @@
+{
+  "name": "reddix",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:start": "node scripts/dev-db.mjs start",
+    "db:stop": "node scripts/dev-db.mjs stop",
+    "db:setup": "tsx scripts/setup-db.ts",
+    "test:e2e": "playwright test",
+    "setup": "node scripts/setup-local.mjs && pnpm db:start && pnpm db:setup",
+    "format": "prettier --write src scripts tests docs README.md CONTRIBUTING.md SECURITY.md *.ts *.json .github/workflows/*.yml",
+    "format:check": "prettier --check src scripts tests docs README.md CONTRIBUTING.md SECURITY.md *.ts *.json .github/workflows/*.yml"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1141.0",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "better-auth": "1.7.6",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "drizzle-orm": "^0.45.3",
+    "geist": "1.7.2",
+    "htmlparser2": "^12.0.0",
+    "ipaddr.js": "^2.5.0",
+    "lucide-react": "^0.577.0",
+    "next": "16.3.6",
+    "postgres": "^3.4.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "sharp": "^0.35.4",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.5.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^24.12.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "dotenv": "^17.3.1",
+    "prettier": "^3.9.9",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "engines": {
+    "node": ">=22 <26"
+  },
+  "packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codyzazulak1/reddix.git"
+  },
+  "homepage": "https://reddix.co"
+}

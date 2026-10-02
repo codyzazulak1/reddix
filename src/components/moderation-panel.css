@@ -1,0 +1,332 @@
+.moderation-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.moderation-heading > div {
+  min-width: 0;
+}
+.moderation-heading h2 {
+  margin: 0;
+}
+.moderation-heading p {
+  margin-top: 3px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.moderation-heading > .icon-button {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.moderation-bot-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+.moderation-state {
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 9px;
+  background: var(--bg);
+  border: 1px solid var(--border-soft);
+}
+.moderation-state > strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+.moderation-state > p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.moderation-state > .text-link,
+.moderation-state > .button {
+  margin-top: 12px;
+  font-size: 13px;
+}
+.moderation-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  color: var(--muted);
+}
+.moderation-configuration {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+}
+.moderation-configuration dt {
+  color: var(--muted);
+  font-size: 12px;
+}
+.moderation-configuration dd {
+  margin: 3px 0 0;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.moderation-counts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 24px 0 20px;
+}
+.moderation-counts > div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+  padding-left: 12px;
+  border-left: 2px solid var(--border);
+}
+.moderation-counts dt {
+  color: var(--muted);
+  font-size: 12px;
+}
+.moderation-counts dd {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 550;
+  font-variant-numeric: tabular-nums;
+}
+.moderation-run {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.moderation-run > p {
+  font-size: 12px !important;
+}
+.moderation-cases {
+  border-top: 1px solid var(--border-soft);
+  margin-top: 26px;
+  padding-top: 24px;
+}
+.moderation-empty {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 10px;
+  line-height: 1.7;
+}
+.moderation-case {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border-soft);
+  overflow-wrap: anywhere;
+}
+.moderation-case:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.moderation-case-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.moderation-case-status {
+  display: inline-block;
+  background: var(--surface-2);
+  padding: 3px 8px;
+  color: var(--text);
+  border-radius: 5px;
+}
+.moderation-case-status[data-status="pending"] {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.moderation-case h4 {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.moderation-case-reason {
+  margin-top: 8px;
+  color: var(--body-text);
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.moderation-case-evidence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 9px;
+}
+.moderation-case-content {
+  margin-top: 14px;
+  font-size: 13px;
+}
+.moderation-case-content summary,
+.moderation-errors summary {
+  cursor: pointer;
+  color: var(--muted);
+}
+.moderation-case-content > p {
+  white-space: pre-wrap;
+  max-height: 260px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 14px;
+  margin-top: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  line-height: 1.7;
+}
+.moderation-case-content > small {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.moderation-case-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+.moderation-case-actions > a {
+  margin-right: auto;
+}
+.moderation-review-note {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--body-text);
+}
+.moderation-review-note strong {
+  font-weight: 550;
+}
+.moderation-errors {
+  border-top: 1px solid var(--border-soft);
+  margin-top: 24px;
+  padding-top: 18px;
+  font-size: 13px;
+}
+.moderation-errors > p {
+  margin-top: 10px;
+  color: var(--muted);
+}
+.moderation-errors > div {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-soft);
+  overflow-wrap: anywhere;
+}
+.moderation-errors strong {
+  font-weight: 550;
+}
+.moderation-errors time {
+  color: var(--muted);
+  font-size: 12px;
+}
+.moderation-notice {
+  margin: 14px 0;
+  padding: 14px 16px;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+.moderation-notice > button {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 550;
+  text-align: left;
+}
+.moderation-notice > button > span {
+  color: var(--muted);
+  font-weight: 400;
+}
+.moderation-notice > p {
+  margin-top: 7px;
+  color: var(--body-text);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.profile-bot-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--accent);
+  margin-top: 12px;
+}
+.profile-bot-about {
+  margin: 0 10px 24px;
+  padding: 24px;
+  border: 1px solid var(--border-soft);
+  background: var(--surface);
+  border-radius: 12px;
+}
+.profile-bot-about h2 {
+  font-size: 18px;
+}
+.profile-bot-about p {
+  color: var(--body-text);
+  font-size: 14px;
+  line-height: 1.75;
+  margin-top: 12px;
+}
+.profile-bot-about a {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--accent);
+  font-size: 13px;
+}
+@media (max-width: 540px) {
+  .moderation-heading {
+    gap: 9px;
+    align-items: flex-start;
+  }
+  .moderation-heading p {
+    font-size: 12px;
+  }
+  .moderation-heading h2 {
+    font-size: 17px;
+  }
+  .moderation-bot-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+  }
+  .moderation-configuration {
+    gap: 14px;
+  }
+  .moderation-state {
+    padding: 14px;
+  }
+  .moderation-counts > div {
+    padding-left: 8px;
+  }
+  .moderation-counts dt {
+    font-size: 11px;
+  }
+  .moderation-counts dd {
+    font-size: 20px;
+  }
+  .moderation-case-actions > a {
+    flex-basis: 100%;
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+  .profile-bot-about {
+    margin-inline: 4px;
+    padding: 18px;
+  }
+}
